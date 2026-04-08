@@ -28,32 +28,6 @@ docker --version
 docker images
 ```
 
-
-## Lab - Building Custom Docker Images
-
-Note
-<pre>
-- When we don't find a pre-built image from Docker Hub, we can build a custom docker image
-- When we have to containerize our proprietary application, we need build a custom docker image
-</pre>
-
-In order to create a custom docker image, you need to create a Dockerfile (Dont' keep your Dockerfile in root directory or sub-directories
-that has other folders and/or files, hence it is always recommended to create a separate directory to place your Dockerfile
-```
-mkdir ~/MyCustomDockerImage
-cd ~/MyCustomDockerImage
-touch Dockerfile
-```
-
-
-
-Now type/paste the below content in the Dockerfile
-```
-FROM ubuntu:latest
-
-```
-
-
 ## Lab - Downloading docker images from Remote Registry to Local Registry
 
 Downloading Docker Image from Docker Hub Remote Registry
