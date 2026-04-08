@@ -69,3 +69,44 @@ docker images
 
 Demo
 ![docker](docker1.svg)
+
+## Lab - Create a mysql docker container
+
+Listing images from your local docker registry
+```
+docker images
+```
+
+Create the mysql container and run it in the background
+```
+mkdir /home/jegan/mysql
+docker run -d --name mysql --hostname mysql -v /home/jegan/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root@123 mysql:latest 
+```
+
+List all running containers
+```
+docker ps
+```
+
+Get inside the mysql container shell, type root@123 as password when it prompts
+```
+docker exec -it mysql /bin/sh
+mysql -u root -p
+
+SHOW DATABASES;
+CREATE DATABASE tektutor;
+USE tektutor;
+
+CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY_KEY, name VARCHAR(250), email VARCHAR(250) );
+SHOW TABLES;
+
+INSERT INTO users (name, email) VALUES ( 'Jegan', 'jegan@tektutor.org' ), ('Nitesh', 'nitesh@tektutor.org'), ('Sriram', 'sriram@tektutor.org');
+SELECT * FROM users;
+exit
+exit
+
+ls -l /hom/jegan/mysql
+```
+
+Demo
+![docker](docker2.svg)
