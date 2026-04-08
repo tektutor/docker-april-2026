@@ -28,16 +28,6 @@ docker --version
 docker images
 ```
 
-## Lab - Downloading Docker Image from Docker Hub Remote Registry
-```
-docker pull ubuntu:latest
-docker pull mysql:latest
-```
-
-## Lab - Listing images from local docker registry
-```
-docker images
-```
 
 ## Lab - Building Custom Docker Images
 
@@ -65,4 +55,17 @@ FROM ubuntu:latest
 
 
 ## Lab - Downloading docker images from Remote Registry to Local Registry
+
+Downloading Docker Image from Docker Hub Remote Registry
+```
+docker pull ubuntu:latest
+docker pull mysql:latest
+```
+
+Listing images from your local docker registry
+```
+docker images
+```
+
+Demo
 ![docker](docker1.svg)
