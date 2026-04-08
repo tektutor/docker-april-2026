@@ -110,3 +110,45 @@ ls -l /hom/jegan/mysql
 
 Demo
 ![docker](docker2.svg)
+
+## Lab - Create a custom image to containerize a simple nodejs application
+Clone TekTutor repo
+```
+cd ~
+git clone https://github.com/tektutor/docker-april-2026.git
+cd docker-april-2026
+cd simple-nodejs-app
+ls
+cat app.js
+cat Dockerfile
+```
+
+Build the custom docker image
+```
+docker build -t tektutor/nodejs:1.0 .
+docker images
+```
+
+Create a container using our custom docker image
+```
+docker run -d --name myapp --hostname myapp tektutor/nodejs:1.0
+docker ps
+```
+
+Find IP address of myapp container
+```
+docker inspect myapp | grep IPA
+```
+
+Test your nodejs application from CLI
+```
+curl http://172.17.0.3:3000
+```
+
+Test your application from web browser
+```
+http://172.17.0.3:3000
+```
+
+Demo
+![docker](docker3.svg)
