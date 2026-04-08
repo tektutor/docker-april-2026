@@ -123,6 +123,7 @@ Test your application from web browser
 ```
 http://172.17.0.3:3000
 ```
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/a6d18427-1d14-4f05-9977-8063f9ea1c62" />
 
 Demo
 ![docker](docker3.svg)
