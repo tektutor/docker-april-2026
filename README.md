@@ -71,7 +71,7 @@ SHOW DATABASES;
 CREATE DATABASE tektutor;
 USE tektutor;
 
-CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY_KEY, name VARCHAR(250), email VARCHAR(250) );
+CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(250), email VARCHAR(250) );
 SHOW TABLES;
 
 INSERT INTO users (name, email) VALUES ( 'Jegan', 'jegan@tektutor.org' ), ('Nitesh', 'nitesh@tektutor.org'), ('Sriram', 'sriram@tektutor.org');
